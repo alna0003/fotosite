@@ -1,0 +1,74 @@
+/* GRID */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1%; /* Reducer afstanden mellem billederne */
+  max-width: 100%;
+}
+
+.item {
+  width: 10.45%; /* Reduceret bredde */
+}
+
+.item img {
+  max-width: 100%; /* Billedet fylder hele containeren */
+  height: auto;
+  display: block;
+  margin: 0.5rem; /* Reducer margin for at gøre billederne tættere */
+}
+.container2 {
+  display: flex;
+  flex-wrap: wrap; /* lave flere rækker */
+  justify-content: center; /* Centrerer billeder inden for hver række */
+  gap: 1%; /* Afstanden mellem billeder */
+}
+
+.item2 {
+  width: 48%; /* Næsten halvdelen, lidt mindre for at give plads til gap */
+  box-sizing: border-box; /* Sikrer padding og border ikke forstyrrer bredden */
+}
+
+.item2 img {
+  max-width: 100%; /* Billedet fylder hele containeren */
+  height: auto;
+  display: block;
+  margin: 0.5rem; /* Centrerer billedet i containeren */
+}
+
+@media (max-width: 600px) {
+  .container2 {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .item2 {
+    width: auto;
+    flex: 0 0 auto;
+  }
+
+  /* style billederne direkte */
+  .item2 img {
+    max-width: 100px;
+  }
+}
+
+/* LAYOUTET */
+body {
+  background-color: rgb(104, 74, 56);
+  font-family: "Amarante", serif;
+  font-size: 45px;
+}
+
+header {
+  width: 100%;
+  text-align: center; /* Centrerer indholdet i headeren */
+  padding: 1rem 0; /* Giver lidt padding ovenfor og nedenfor */
+  color: aliceblue;
+}
+
+.item {
+  font-size: 14px; /* Eller vælg den størrelse, du ønsker */
+  color: aliceblue;
+}
